@@ -26,6 +26,10 @@
 
 @property (nonatomic, strong) UIView *YingQiView7;
 
+@property (nonatomic, strong) UIView *YingQiView8;
+
+@property (nonatomic, strong) UIView *YingQiView9;
+
 @end
 
 @implementation ViewController
@@ -126,5 +130,152 @@
     }
     return _YingQiView7;
 }
+
+- (UIView *)YingQiView8 {
+	if (_YingQiView8 == nil) {
+        _YingQiView8 = [[[NSBundle mainBundle] loadNibNamed:@"YingQiView8" owner:self options:nil] lastObject];
+	}
+	return _YingQiView8;
+}
+- (UIView *)YingQiView9 {
+	if (_YingQiView9 == nil) {
+        _YingQiView9 = [[[NSBundle mainBundle] loadNibNamed:@"YingQiView9" owner:self options:nil] lastObject];
+	}
+	return _YingQiView9;
+}
+
+#pragma mark  ================== action ==================
+
+#pragma mark  ================== 2 ==================
+/**
+ *  继续游戏模式
+ *  @param sender <#sender description#>
+ */
+- (IBAction)continueGameMode:(id)sender {
+}
+
+/**
+ *  绑定手机
+ *  @param sender <#sender description#>
+ */
+- (IBAction)bindingPhone:(id)sender {
+}
+
+/**
+ *  返回按钮
+ *  @param sender <#sender description#>
+ */
+- (IBAction)backBtnClick_2:(id)sender {
+}
+
+#pragma mark  ================== 3 ==================
+/**
+ *  验证
+ *  @param sender <#sender description#>
+ */
+- (IBAction)verifyBtnClick:(id)sender {
+}
+
+/**
+ *  注册帐号
+ *  @param sender <#sender description#>
+ */
+- (IBAction)accountRegister:(id)sender {
+}
+
+- (IBAction)backBtnClick_3:(id)sender {
+}
+
+
+#pragma mark  ================== 4 ==================
+/**
+ *  注册
+ *  @param sender <#sender description#>
+ */
+- (IBAction)registerBtnClick:(id)sender {
+}
+
+
+- (IBAction)backBtnClick_4:(id)sender {
+}
+
+
+#pragma mark  ================== 5 ==================
+- (IBAction)registerBtnClick_5:(id)sender {
+}
+
+- (IBAction)backBtnClick_5:(id)sender {
+}
+
+
+#pragma mark  ================== 6 ==================
+/**
+ *  登录
+ *  @param sender <#sender description#>
+ */
+- (IBAction)loginBtnClick:(id)sender {
+}
+
+/**
+ *  找回密码
+ *  @param sender <#sender description#>
+ */
+- (IBAction)getbackPassWordBtnClick:(id)sender {
+}
+
+/**
+ *  快速注册
+ *  @param sender <#sender description#>
+ */
+- (IBAction)fastRegisterBtnClick:(id)sender {
+}
+
+
+- (IBAction)backBtnClick_6:(id)sender {
+}
+
+
+#pragma mark  ================== 7 ==================
+/**
+ *  确定
+ *  @param sender <#sender description#>
+ */
+- (IBAction)confirmBtnClick:(id)sender {
+}
+
+/**
+ *  其他方式
+ *  @param sender <#sender description#>
+ */
+- (IBAction)otherWayBtnClick:(id)sender {
+}
+
+- (IBAction)backBtnClick_7:(id)sender {
+}
+
+#pragma mark  ================== 8 ==================
+/**
+ *  确定
+ *  @param sender <#sender description#>
+ */
+- (IBAction)confirmBtnClick_8:(id)sender {
+}
+
+/**
+ *  其他方式
+ *  @param sender <#sender description#>
+ */
+- (IBAction)otherWayBtnClick_8:(id)sender {
+}
+
+- (IBAction)backBtnClick_8:(id)sender {
+}
+
+#pragma mark  ================== 9 ==================
+
+- (IBAction)backBtnClick_9:(id)sender {
+}
+
+
 
 @end

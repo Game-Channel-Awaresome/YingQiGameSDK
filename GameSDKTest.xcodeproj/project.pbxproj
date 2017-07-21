@@ -21,6 +21,14 @@
 		60D4ADBF1E83E58100DEE9D1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60D4ADBE1E83E58100DEE9D1 /* SystemConfiguration.framework */; };
 		60D4ADC11E83E58A00DEE9D1 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60D4ADC01E83E58A00DEE9D1 /* CoreTelephony.framework */; };
 		60D4ADC31E83E59600DEE9D1 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 60D4ADC21E83E59600DEE9D1 /* libsqlite3.tbd */; };
+		CB8656631F219E7D0055BCEC /* YingQiView2.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB8656621F219E7D0055BCEC /* YingQiView2.xib */; };
+		CB8656651F219E880055BCEC /* YingQiView3.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB8656641F219E880055BCEC /* YingQiView3.xib */; };
+		CB8656671F219EA30055BCEC /* YingQiView4.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB8656661F219EA30055BCEC /* YingQiView4.xib */; };
+		CB8656691F219EAD0055BCEC /* YingQiView5.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB8656681F219EAD0055BCEC /* YingQiView5.xib */; };
+		CB86566B1F219EB30055BCEC /* YingQiView6.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB86566A1F219EB30055BCEC /* YingQiView6.xib */; };
+		CB86566D1F219EB90055BCEC /* YingQiView7.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB86566C1F219EB90055BCEC /* YingQiView7.xib */; };
+		CB86566F1F21A5670055BCEC /* YingQiView8.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB86566E1F21A5670055BCEC /* YingQiView8.xib */; };
+		CB8656711F21A5700055BCEC /* YingQiView9.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB8656701F21A5700055BCEC /* YingQiView9.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +50,14 @@
 		60D4ADBE1E83E58100DEE9D1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		60D4ADC01E83E58A00DEE9D1 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		60D4ADC21E83E59600DEE9D1 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		CB8656621F219E7D0055BCEC /* YingQiView2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YingQiView2.xib; sourceTree = "<group>"; };
+		CB8656641F219E880055BCEC /* YingQiView3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YingQiView3.xib; sourceTree = "<group>"; };
+		CB8656661F219EA30055BCEC /* YingQiView4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YingQiView4.xib; sourceTree = "<group>"; };
+		CB8656681F219EAD0055BCEC /* YingQiView5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YingQiView5.xib; sourceTree = "<group>"; };
+		CB86566A1F219EB30055BCEC /* YingQiView6.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YingQiView6.xib; sourceTree = "<group>"; };
+		CB86566C1F219EB90055BCEC /* YingQiView7.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YingQiView7.xib; sourceTree = "<group>"; };
+		CB86566E1F21A5670055BCEC /* YingQiView8.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YingQiView8.xib; sourceTree = "<group>"; };
+		CB8656701F21A5700055BCEC /* YingQiView9.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YingQiView9.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +105,14 @@
 				604F041A1F20976B007C32AE /* ViewController.m */,
 				604F041B1F20976B007C32AE /* ViewController.xib */,
 				604F041E1F209B1F007C32AE /* YingQiView1.xib */,
+				CB8656621F219E7D0055BCEC /* YingQiView2.xib */,
+				CB8656641F219E880055BCEC /* YingQiView3.xib */,
+				CB8656661F219EA30055BCEC /* YingQiView4.xib */,
+				CB8656681F219EAD0055BCEC /* YingQiView5.xib */,
+				CB86566A1F219EB30055BCEC /* YingQiView6.xib */,
+				CB86566C1F219EB90055BCEC /* YingQiView7.xib */,
+				CB86566E1F21A5670055BCEC /* YingQiView8.xib */,
+				CB8656701F21A5700055BCEC /* YingQiView9.xib */,
 				60D4ADA71E83DCCB00DEE9D1 /* Assets.xcassets */,
 				60D4ADA91E83DCCB00DEE9D1 /* LaunchScreen.storyboard */,
 				60D4ADAC1E83DCCB00DEE9D1 /* Info.plist */,
@@ -177,10 +201,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB86566F1F21A5670055BCEC /* YingQiView8.xib in Resources */,
 				60D4ADAB1E83DCCB00DEE9D1 /* LaunchScreen.storyboard in Resources */,
+				CB8656691F219EAD0055BCEC /* YingQiView5.xib in Resources */,
 				604F041F1F209B20007C32AE /* YingQiView1.xib in Resources */,
+				CB86566D1F219EB90055BCEC /* YingQiView7.xib in Resources */,
+				CB8656711F21A5700055BCEC /* YingQiView9.xib in Resources */,
 				60D4ADA81E83DCCB00DEE9D1 /* Assets.xcassets in Resources */,
+				CB8656631F219E7D0055BCEC /* YingQiView2.xib in Resources */,
 				604F041D1F20976B007C32AE /* ViewController.xib in Resources */,
+				CB8656651F219E880055BCEC /* YingQiView3.xib in Resources */,
+				CB8656671F219EA30055BCEC /* YingQiView4.xib in Resources */,
+				CB86566B1F219EB30055BCEC /* YingQiView6.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
