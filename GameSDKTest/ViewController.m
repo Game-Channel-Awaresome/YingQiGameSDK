@@ -56,18 +56,24 @@
  */
 - (IBAction)youkeLogin:(id)sender {
     
+    self.YingQiView2.hidden = NO;
+    self.YingQiView1.hidden = YES;
 }
 /**
  手机注册
  */
 - (IBAction)phoneRegister:(id)sender {
     
+    self.YingQiView3.hidden = NO;
+    self.YingQiView1.hidden = YES;
 }
 /**
  账号登陆
  */
 - (IBAction)accountLogin:(id)sender {
     
+    self.YingQiView6.hidden = NO;
+    self.YingQiView1.hidden = YES;
 }
 
 #pragma mark 视图懒加载
@@ -97,36 +103,42 @@
 - (UIView *)YingQiView2 {
     if (_YingQiView2 == nil) {
         _YingQiView2 = [[[NSBundle mainBundle] loadNibNamed:@"YingQiView2" owner:self options:nil] lastObject];
+        [self.YingQiBaseView addSubview:_YingQiView2];
     }
     return _YingQiView2;
 }
 - (UIView *)YingQiView3 {
     if (_YingQiView3 == nil) {
         _YingQiView3 = [[[NSBundle mainBundle] loadNibNamed:@"YingQiView3" owner:self options:nil] lastObject];
+        [self.YingQiBaseView addSubview:_YingQiView3];
     }
     return _YingQiView3;
 }
 - (UIView *)YingQiView4 {
     if (_YingQiView4 == nil) {
         _YingQiView4 = [[[NSBundle mainBundle] loadNibNamed:@"YingQiView4" owner:self options:nil] lastObject];
+        [self.YingQiBaseView addSubview:_YingQiView4];
     }
     return _YingQiView4;
 }
 - (UIView *)YingQiView5 {
     if (_YingQiView5 == nil) {
         _YingQiView5 = [[[NSBundle mainBundle] loadNibNamed:@"YingQiView5" owner:self options:nil] lastObject];
+        [self.YingQiBaseView addSubview:_YingQiView5];
     }
     return _YingQiView5;
 }
 - (UIView *)YingQiView6 {
     if (_YingQiView6 == nil) {
         _YingQiView6 = [[[NSBundle mainBundle] loadNibNamed:@"YingQiView6" owner:self options:nil] lastObject];
+        [self.YingQiBaseView addSubview:_YingQiView6];
     }
     return _YingQiView6;
 }
 - (UIView *)YingQiView7 {
     if (_YingQiView7 == nil) {
         _YingQiView7 = [[[NSBundle mainBundle] loadNibNamed:@"YingQiView7" owner:self options:nil] lastObject];
+        [self.YingQiBaseView addSubview:_YingQiView7];
     }
     return _YingQiView7;
 }
@@ -134,12 +146,14 @@
 - (UIView *)YingQiView8 {
 	if (_YingQiView8 == nil) {
         _YingQiView8 = [[[NSBundle mainBundle] loadNibNamed:@"YingQiView8" owner:self options:nil] lastObject];
+        [self.YingQiBaseView addSubview:_YingQiView8];
 	}
 	return _YingQiView8;
 }
 - (UIView *)YingQiView9 {
 	if (_YingQiView9 == nil) {
         _YingQiView9 = [[[NSBundle mainBundle] loadNibNamed:@"YingQiView9" owner:self options:nil] lastObject];
+        [self.YingQiBaseView addSubview:_YingQiView9];
 	}
 	return _YingQiView9;
 }
@@ -159,6 +173,9 @@
  *  @param sender <#sender description#>
  */
 - (IBAction)bindingPhone:(id)sender {
+    
+    self.YingQiView2.hidden = YES;
+    self.YingQiView3.hidden = NO;
 }
 
 /**
@@ -166,6 +183,9 @@
  *  @param sender <#sender description#>
  */
 - (IBAction)backBtnClick_2:(id)sender {
+    
+    self.YingQiView2.hidden = YES;
+    self.YingQiView1.hidden = NO;
 }
 
 #pragma mark  ================== 3 ==================
@@ -174,6 +194,9 @@
  *  @param sender <#sender description#>
  */
 - (IBAction)verifyBtnClick:(id)sender {
+    
+    self.YingQiView3.hidden = YES;
+    self.YingQiView4.hidden = NO;
 }
 
 /**
@@ -181,9 +204,15 @@
  *  @param sender <#sender description#>
  */
 - (IBAction)accountRegister:(id)sender {
+    
+    self.YingQiView3.hidden = YES;
+    self.YingQiView5.hidden = NO;
 }
 
 - (IBAction)backBtnClick_3:(id)sender {
+    
+    self.YingQiView3.hidden = YES;
+    self.YingQiView1.hidden = NO;
 }
 
 
@@ -221,6 +250,8 @@
  *  @param sender <#sender description#>
  */
 - (IBAction)loginBtnClick:(id)sender {
+    
+    
 }
 
 /**
@@ -228,6 +259,9 @@
  *  @param sender <#sender description#>
  */
 - (IBAction)getbackPassWordBtnClick:(id)sender {
+    
+    self.YingQiView6.hidden = YES;
+    self.YingQiView7.hidden = NO;
 }
 
 /**
@@ -235,10 +269,16 @@
  *  @param sender <#sender description#>
  */
 - (IBAction)fastRegisterBtnClick:(id)sender {
+    
+    self.YingQiView6.hidden = YES;
+    self.YingQiView3.hidden = NO;
 }
 
 
 - (IBAction)backBtnClick_6:(id)sender {
+    
+    self.YingQiView6.hidden = YES;
+    self.YingQiView1.hidden = NO;
 }
 
 
@@ -248,6 +288,9 @@
  *  @param sender <#sender description#>
  */
 - (IBAction)confirmBtnClick:(id)sender {
+    
+    self.YingQiView7.hidden = YES;
+    self.YingQiView8.hidden = NO;
 }
 
 /**
@@ -255,9 +298,15 @@
  *  @param sender <#sender description#>
  */
 - (IBAction)otherWayBtnClick:(id)sender {
+    
+    self.YingQiView7.hidden = YES;
+    self.YingQiView9.hidden = NO;
 }
 
 - (IBAction)backBtnClick_7:(id)sender {
+    
+    self.YingQiView7.hidden = YES;
+    self.YingQiView6.hidden = NO;
 }
 
 #pragma mark  ================== 8 ==================
