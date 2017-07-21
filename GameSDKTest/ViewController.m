@@ -195,6 +195,13 @@
 - (IBAction)registerBtnClick:(id)sender {
 }
 
+/**
+ *  发送验证码
+ *  @param sender <#sender description#>
+ */
+- (IBAction)sendSMSCode:(id)sender {
+}
+
 
 - (IBAction)backBtnClick_4:(id)sender {
 }
