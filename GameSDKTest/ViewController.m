@@ -66,6 +66,7 @@
     
     self.YingQiView3.hidden = NO;
     self.YingQiView1.hidden = YES;
+    self.YingQiView3.tag = 1;
 }
 /**
  账号登陆
@@ -176,6 +177,7 @@
     
     self.YingQiView2.hidden = YES;
     self.YingQiView3.hidden = NO;
+    self.YingQiView3.tag = 2;
 }
 
 /**
@@ -211,8 +213,19 @@
 
 - (IBAction)backBtnClick_3:(id)sender {
     
-    self.YingQiView3.hidden = YES;
-    self.YingQiView1.hidden = NO;
+    if (self.YingQiView3.tag == 2) {
+        
+        self.YingQiView3.hidden = YES;
+        self.YingQiView2.hidden = NO;
+    } else if (self.YingQiView3.tag == 2) {
+        
+        self.YingQiView3.hidden = YES;
+        self.YingQiView1.hidden = NO;
+    } else if (self.YingQiView3.tag == 6) {
+        
+        self.YingQiView3.hidden = YES;
+        self.YingQiView6.hidden = NO;
+    }
 }
 
 
@@ -272,6 +285,7 @@
     
     self.YingQiView6.hidden = YES;
     self.YingQiView3.hidden = NO;
+    self.YingQiView3.tag = 6;
 }
 
 
