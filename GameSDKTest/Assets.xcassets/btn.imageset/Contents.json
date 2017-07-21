@@ -1,6 +1,20 @@
 {
   "images" : [
     {
+      "resizing" : {
+        "mode" : "9-part",
+        "center" : {
+          "mode" : "tile",
+          "width" : 1,
+          "height" : 1
+        },
+        "cap-insets" : {
+          "bottom" : 9,
+          "top" : 8,
+          "right" : 43,
+          "left" : 52
+        }
+      },
       "idiom" : "universal",
       "filename" : "btn.png",
       "scale" : "1x"
