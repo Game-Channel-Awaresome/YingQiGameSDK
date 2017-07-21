@@ -89,4 +89,42 @@
 }
 */
 
+#pragma mark  ================== lazy load ==================
+- (UIView *)YingQiView2 {
+    if (_YingQiView2 == nil) {
+        _YingQiView2 = [[[NSBundle mainBundle] loadNibNamed:@"YingQiView2" owner:self options:nil] lastObject];
+    }
+    return _YingQiView2;
+}
+- (UIView *)YingQiView3 {
+    if (_YingQiView3 == nil) {
+        _YingQiView3 = [[[NSBundle mainBundle] loadNibNamed:@"YingQiView3" owner:self options:nil] lastObject];
+    }
+    return _YingQiView3;
+}
+- (UIView *)YingQiView4 {
+    if (_YingQiView4 == nil) {
+        _YingQiView4 = [[[NSBundle mainBundle] loadNibNamed:@"YingQiView4" owner:self options:nil] lastObject];
+    }
+    return _YingQiView4;
+}
+- (UIView *)YingQiView5 {
+    if (_YingQiView5 == nil) {
+        _YingQiView5 = [[[NSBundle mainBundle] loadNibNamed:@"YingQiView5" owner:self options:nil] lastObject];
+    }
+    return _YingQiView5;
+}
+- (UIView *)YingQiView6 {
+    if (_YingQiView6 == nil) {
+        _YingQiView6 = [[[NSBundle mainBundle] loadNibNamed:@"YingQiView6" owner:self options:nil] lastObject];
+    }
+    return _YingQiView6;
+}
+- (UIView *)YingQiView7 {
+    if (_YingQiView7 == nil) {
+        _YingQiView7 = [[[NSBundle mainBundle] loadNibNamed:@"YingQiView7" owner:self options:nil] lastObject];
+    }
+    return _YingQiView7;
+}
+
 @end
