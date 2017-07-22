@@ -36,6 +36,7 @@
 		604F041A1F20976B007C32AE /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		604F041B1F20976B007C32AE /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		604F041E1F209B1F007C32AE /* YingQiView1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YingQiView1.xib; sourceTree = "<group>"; };
+		60BFCF7C1F23334600D047E2 /* YingQiSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YingQiSDK.h; sourceTree = "<group>"; };
 		60D4AD981E83DCCB00DEE9D1 /* GameSDKTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameSDKTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60D4AD9C1E83DCCB00DEE9D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		60D4AD9E1E83DCCB00DEE9D1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -101,6 +102,7 @@
 				60D4ADB51E83E00B00DEE9D1 /* GameSDK.a */,
 				60D4AD9E1E83DCCB00DEE9D1 /* AppDelegate.h */,
 				60D4AD9F1E83DCCB00DEE9D1 /* AppDelegate.m */,
+				60BFCF7C1F23334600D047E2 /* YingQiSDK.h */,
 				604F04191F20976B007C32AE /* ViewController.h */,
 				604F041A1F20976B007C32AE /* ViewController.m */,
 				604F041B1F20976B007C32AE /* ViewController.xib */,

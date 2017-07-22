@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "YingQiSDK.h"
 
 @interface ViewController ()
 
@@ -58,6 +59,18 @@
     
     self.YingQiView2.hidden = NO;
     self.YingQiView1.hidden = YES;
+    
+    [YingQiSDK YingQiSDKRequst_tempWithsB:^(NSDictionary *dic) {
+        NSLog(@"%@",dic);
+        if ([self.delegate respondsToSelector:@selector(YingQiLogin_Successed:)]) {
+            [self.delegate YingQiLogin_Successed:dic];
+        }
+    } fB:^(NSDictionary *dic) {
+        if ([self.delegate respondsToSelector:@selector(YingQiLogin_Failed:)]) {
+            [self.delegate YingQiLogin_Failed:dic];
+        }
+    }];
+    
 }
 /**
  手机注册
