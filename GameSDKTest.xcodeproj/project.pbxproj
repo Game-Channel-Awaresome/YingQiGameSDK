@@ -29,6 +29,8 @@
 		CB86566D1F219EB90055BCEC /* YingQiView7.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB86566C1F219EB90055BCEC /* YingQiView7.xib */; };
 		CB86566F1F21A5670055BCEC /* YingQiView8.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB86566E1F21A5670055BCEC /* YingQiView8.xib */; };
 		CB8656711F21A5700055BCEC /* YingQiView9.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB8656701F21A5700055BCEC /* YingQiView9.xib */; };
+		CBE9AE451F2339B200AA0E9C /* CustomTF.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE9AE441F2339B200AA0E9C /* CustomTF.m */; };
+		CBE9AE481F233D3100AA0E9C /* CustomTF_2.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE9AE471F233D3100AA0E9C /* CustomTF_2.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,10 @@
 		CB86566C1F219EB90055BCEC /* YingQiView7.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YingQiView7.xib; sourceTree = "<group>"; };
 		CB86566E1F21A5670055BCEC /* YingQiView8.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YingQiView8.xib; sourceTree = "<group>"; };
 		CB8656701F21A5700055BCEC /* YingQiView9.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YingQiView9.xib; sourceTree = "<group>"; };
+		CBE9AE431F2339B200AA0E9C /* CustomTF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTF.h; sourceTree = "<group>"; };
+		CBE9AE441F2339B200AA0E9C /* CustomTF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTF.m; sourceTree = "<group>"; };
+		CBE9AE461F233D3100AA0E9C /* CustomTF_2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTF_2.h; sourceTree = "<group>"; };
+		CBE9AE471F233D3100AA0E9C /* CustomTF_2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTF_2.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +119,10 @@
 				CB86566C1F219EB90055BCEC /* YingQiView7.xib */,
 				CB86566E1F21A5670055BCEC /* YingQiView8.xib */,
 				CB8656701F21A5700055BCEC /* YingQiView9.xib */,
+				CBE9AE431F2339B200AA0E9C /* CustomTF.h */,
+				CBE9AE441F2339B200AA0E9C /* CustomTF.m */,
+				CBE9AE461F233D3100AA0E9C /* CustomTF_2.h */,
+				CBE9AE471F233D3100AA0E9C /* CustomTF_2.m */,
 				60D4ADA71E83DCCB00DEE9D1 /* Assets.xcassets */,
 				60D4ADA91E83DCCB00DEE9D1 /* LaunchScreen.storyboard */,
 				60D4ADAC1E83DCCB00DEE9D1 /* Info.plist */,
@@ -225,6 +235,8 @@
 			files = (
 				604F041C1F20976B007C32AE /* ViewController.m in Sources */,
 				60D4ADA01E83DCCB00DEE9D1 /* AppDelegate.m in Sources */,
+				CBE9AE481F233D3100AA0E9C /* CustomTF_2.m in Sources */,
+				CBE9AE451F2339B200AA0E9C /* CustomTF.m in Sources */,
 				60D4AD9D1E83DCCB00DEE9D1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

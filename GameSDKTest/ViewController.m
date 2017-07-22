@@ -213,10 +213,10 @@
 
 - (IBAction)backBtnClick_3:(id)sender {
     
-    if (self.YingQiView3.tag == 2) {
+    if (self.YingQiView3.tag == 1) {
         
         self.YingQiView3.hidden = YES;
-        self.YingQiView2.hidden = NO;
+        self.YingQiView1.hidden = NO;
     } else if (self.YingQiView3.tag == 2) {
         
         self.YingQiView3.hidden = YES;
@@ -246,6 +246,9 @@
 
 
 - (IBAction)backBtnClick_4:(id)sender {
+    
+    self.YingQiView4.hidden = YES;
+    self.YingQiView3.hidden = NO;
 }
 
 
@@ -254,6 +257,9 @@
 }
 
 - (IBAction)backBtnClick_5:(id)sender {
+    
+    self.YingQiView5.hidden = YES;
+    self.YingQiView3.hidden = NO;
 }
 
 
@@ -336,6 +342,9 @@
  *  @param sender <#sender description#>
  */
 - (IBAction)otherWayBtnClick_8:(id)sender {
+    
+    self.YingQiView8.hidden = YES;
+    self.YingQiView7.hidden = NO;
 }
 
 - (IBAction)backBtnClick_8:(id)sender {
@@ -344,6 +353,9 @@
 #pragma mark  ================== 9 ==================
 
 - (IBAction)backBtnClick_9:(id)sender {
+    
+    self.YingQiView9.hidden = YES;
+    self.YingQiView7.hidden = NO;
 }
 
 
