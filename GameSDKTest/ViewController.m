@@ -79,6 +79,7 @@
     
     self.YingQiView3.hidden = NO;
     self.YingQiView1.hidden = YES;
+    self.YingQiView3.tag = 1;
 }
 /**
  账号登陆
@@ -189,6 +190,7 @@
     
     self.YingQiView2.hidden = YES;
     self.YingQiView3.hidden = NO;
+    self.YingQiView3.tag = 2;
 }
 
 /**
@@ -224,8 +226,19 @@
 
 - (IBAction)backBtnClick_3:(id)sender {
     
-    self.YingQiView3.hidden = YES;
-    self.YingQiView1.hidden = NO;
+    if (self.YingQiView3.tag == 1) {
+        
+        self.YingQiView3.hidden = YES;
+        self.YingQiView1.hidden = NO;
+    } else if (self.YingQiView3.tag == 2) {
+        
+        self.YingQiView3.hidden = YES;
+        self.YingQiView1.hidden = NO;
+    } else if (self.YingQiView3.tag == 6) {
+        
+        self.YingQiView3.hidden = YES;
+        self.YingQiView6.hidden = NO;
+    }
 }
 
 
@@ -246,6 +259,9 @@
 
 
 - (IBAction)backBtnClick_4:(id)sender {
+    
+    self.YingQiView4.hidden = YES;
+    self.YingQiView3.hidden = NO;
 }
 
 
@@ -254,6 +270,9 @@
 }
 
 - (IBAction)backBtnClick_5:(id)sender {
+    
+    self.YingQiView5.hidden = YES;
+    self.YingQiView3.hidden = NO;
 }
 
 
@@ -285,6 +304,7 @@
     
     self.YingQiView6.hidden = YES;
     self.YingQiView3.hidden = NO;
+    self.YingQiView3.tag = 6;
 }
 
 
@@ -335,6 +355,9 @@
  *  @param sender <#sender description#>
  */
 - (IBAction)otherWayBtnClick_8:(id)sender {
+    
+    self.YingQiView8.hidden = YES;
+    self.YingQiView7.hidden = NO;
 }
 
 - (IBAction)backBtnClick_8:(id)sender {
@@ -343,6 +366,9 @@
 #pragma mark  ================== 9 ==================
 
 - (IBAction)backBtnClick_9:(id)sender {
+    
+    self.YingQiView9.hidden = YES;
+    self.YingQiView7.hidden = NO;
 }
 
 
