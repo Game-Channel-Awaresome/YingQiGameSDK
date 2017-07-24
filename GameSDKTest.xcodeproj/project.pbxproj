@@ -21,6 +21,8 @@
 		60D4ADBF1E83E58100DEE9D1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60D4ADBE1E83E58100DEE9D1 /* SystemConfiguration.framework */; };
 		60D4ADC11E83E58A00DEE9D1 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60D4ADC01E83E58A00DEE9D1 /* CoreTelephony.framework */; };
 		60D4ADC31E83E59600DEE9D1 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 60D4ADC21E83E59600DEE9D1 /* libsqlite3.tbd */; };
+		CB2058AD1F243C3E00343526 /* dropdownMenu_cornerIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CB2058AA1F243C3E00343526 /* dropdownMenu_cornerIcon.png */; };
+		CB2058AE1F243C3E00343526 /* LMJDropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2058AC1F243C3E00343526 /* LMJDropdownMenu.m */; };
 		CB8656631F219E7D0055BCEC /* YingQiView2.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB8656621F219E7D0055BCEC /* YingQiView2.xib */; };
 		CB8656651F219E880055BCEC /* YingQiView3.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB8656641F219E880055BCEC /* YingQiView3.xib */; };
 		CB8656671F219EA30055BCEC /* YingQiView4.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB8656661F219EA30055BCEC /* YingQiView4.xib */; };
@@ -53,6 +55,9 @@
 		60D4ADBE1E83E58100DEE9D1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		60D4ADC01E83E58A00DEE9D1 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		60D4ADC21E83E59600DEE9D1 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		CB2058AA1F243C3E00343526 /* dropdownMenu_cornerIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropdownMenu_cornerIcon.png; sourceTree = "<group>"; };
+		CB2058AB1F243C3E00343526 /* LMJDropdownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMJDropdownMenu.h; sourceTree = "<group>"; };
+		CB2058AC1F243C3E00343526 /* LMJDropdownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMJDropdownMenu.m; sourceTree = "<group>"; };
 		CB8656621F219E7D0055BCEC /* YingQiView2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YingQiView2.xib; sourceTree = "<group>"; };
 		CB8656641F219E880055BCEC /* YingQiView3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YingQiView3.xib; sourceTree = "<group>"; };
 		CB8656661F219EA30055BCEC /* YingQiView4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YingQiView4.xib; sourceTree = "<group>"; };
@@ -105,6 +110,7 @@
 		60D4AD9A1E83DCCB00DEE9D1 /* GameSDKTest */ = {
 			isa = PBXGroup;
 			children = (
+				CB2058A91F243C3E00343526 /* LMJDropdownMenu */,
 				60D4ADB51E83E00B00DEE9D1 /* GameSDK.a */,
 				60D4AD9E1E83DCCB00DEE9D1 /* AppDelegate.h */,
 				60D4AD9F1E83DCCB00DEE9D1 /* AppDelegate.m */,
@@ -152,6 +158,16 @@
 				60D4ADB81E83E56100DEE9D1 /* libz.tbd */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB2058A91F243C3E00343526 /* LMJDropdownMenu */ = {
+			isa = PBXGroup;
+			children = (
+				CB2058AA1F243C3E00343526 /* dropdownMenu_cornerIcon.png */,
+				CB2058AB1F243C3E00343526 /* LMJDropdownMenu.h */,
+				CB2058AC1F243C3E00343526 /* LMJDropdownMenu.m */,
+			);
+			path = LMJDropdownMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +235,7 @@
 				604F041F1F209B20007C32AE /* YingQiView1.xib in Resources */,
 				CB86566D1F219EB90055BCEC /* YingQiView7.xib in Resources */,
 				CB8656711F21A5700055BCEC /* YingQiView9.xib in Resources */,
+				CB2058AD1F243C3E00343526 /* dropdownMenu_cornerIcon.png in Resources */,
 				60D4ADA81E83DCCB00DEE9D1 /* Assets.xcassets in Resources */,
 				CB8656631F219E7D0055BCEC /* YingQiView2.xib in Resources */,
 				604F041D1F20976B007C32AE /* ViewController.xib in Resources */,
@@ -236,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				604F041C1F20976B007C32AE /* ViewController.m in Sources */,
+				CB2058AE1F243C3E00343526 /* LMJDropdownMenu.m in Sources */,
 				60D4ADA01E83DCCB00DEE9D1 /* AppDelegate.m in Sources */,
 				CBE9AE481F233D3100AA0E9C /* CustomTF_2.m in Sources */,
 				CBE9AE451F2339B200AA0E9C /* CustomTF.m in Sources */,

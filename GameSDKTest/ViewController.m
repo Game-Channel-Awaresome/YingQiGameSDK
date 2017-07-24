@@ -8,8 +8,11 @@
 
 #import "ViewController.h"
 #import "YingQiSDK.h"
+#import "LMJDropdownMenu.h"
+#import "CustomTF.h"
+#import "CustomTF_2.h"
 
-@interface ViewController ()
+@interface ViewController ()<LMJDropdownMenuDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *YingQiBaseView;
 
@@ -31,9 +34,27 @@
 
 @property (nonatomic, strong) UIView *YingQiView9;
 
+@property (strong, nonatomic) IBOutlet CustomTF *tf_6_1;
+/**
+ *  下拉数组
+ */
+@property (nonatomic, strong) NSArray *downDropArr;
+
 @end
 
 @implementation ViewController
+
+- (NSArray *)downDropArr {
+    
+    if (_downDropArr == nil) {
+        _downDropArr = [[NSArray alloc] init];
+        _downDropArr = @[@"选项一",@"选项二",@"选项三",@"选项四"];
+        
+        // 本地化储存取值 todo
+        
+    }
+    return _downDropArr;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -48,7 +69,14 @@
 
 #pragma mark 第一个图的UI
 -(void)onePic{
-    [self.YingQiBaseView addSubview:self.YingQiView1];
+    [self.YingQiBaseView addSubview:self.YingQiView6];
+    
+    LMJDropdownMenu * dropdownMenu = [[LMJDropdownMenu alloc] init];
+    [dropdownMenu setFrame:CGRectMake(360, 33, 30, 30)];
+    
+    [dropdownMenu setMenuTitles:self.downDropArr rowHeight:30];
+    dropdownMenu.delegate = self;
+    [self.YingQiView6 addSubview:dropdownMenu];
 }
 
 #pragma mark 第一个图的Action
@@ -371,6 +399,11 @@
     self.YingQiView7.hidden = NO;
 }
 
+#pragma mark  ================== delegate ==================
 
+- (void)dropdownMenu:(LMJDropdownMenu *)menu selectedCellNumber:(NSInteger)number {
+    
+    self.tf_6_1.text = self.downDropArr[number];
+}
 
 @end
