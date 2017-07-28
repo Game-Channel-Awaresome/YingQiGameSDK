@@ -23,6 +23,8 @@
 		60D4ADC31E83E59600DEE9D1 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 60D4ADC21E83E59600DEE9D1 /* libsqlite3.tbd */; };
 		CB2058AD1F243C3E00343526 /* dropdownMenu_cornerIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CB2058AA1F243C3E00343526 /* dropdownMenu_cornerIcon.png */; };
 		CB2058AE1F243C3E00343526 /* LMJDropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2058AC1F243C3E00343526 /* LMJDropdownMenu.m */; };
+		CB2CB4021F2ADAF90044D5E7 /* YingQiView10.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB2CB4011F2ADAF90044D5E7 /* YingQiView10.xib */; };
+		CB76925C1F2AE96C00C30B1A /* YingQiView12.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB76925B1F2AE96C00C30B1A /* YingQiView12.xib */; };
 		CB8656631F219E7D0055BCEC /* YingQiView2.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB8656621F219E7D0055BCEC /* YingQiView2.xib */; };
 		CB8656651F219E880055BCEC /* YingQiView3.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB8656641F219E880055BCEC /* YingQiView3.xib */; };
 		CB8656671F219EA30055BCEC /* YingQiView4.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB8656661F219EA30055BCEC /* YingQiView4.xib */; };
@@ -58,6 +60,8 @@
 		CB2058AA1F243C3E00343526 /* dropdownMenu_cornerIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropdownMenu_cornerIcon.png; sourceTree = "<group>"; };
 		CB2058AB1F243C3E00343526 /* LMJDropdownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMJDropdownMenu.h; sourceTree = "<group>"; };
 		CB2058AC1F243C3E00343526 /* LMJDropdownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMJDropdownMenu.m; sourceTree = "<group>"; };
+		CB2CB4011F2ADAF90044D5E7 /* YingQiView10.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YingQiView10.xib; sourceTree = "<group>"; };
+		CB76925B1F2AE96C00C30B1A /* YingQiView12.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YingQiView12.xib; sourceTree = "<group>"; };
 		CB8656621F219E7D0055BCEC /* YingQiView2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YingQiView2.xib; sourceTree = "<group>"; };
 		CB8656641F219E880055BCEC /* YingQiView3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YingQiView3.xib; sourceTree = "<group>"; };
 		CB8656661F219EA30055BCEC /* YingQiView4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YingQiView4.xib; sourceTree = "<group>"; };
@@ -127,6 +131,8 @@
 				CB86566C1F219EB90055BCEC /* YingQiView7.xib */,
 				CB86566E1F21A5670055BCEC /* YingQiView8.xib */,
 				CB8656701F21A5700055BCEC /* YingQiView9.xib */,
+				CB2CB4011F2ADAF90044D5E7 /* YingQiView10.xib */,
+				CB76925B1F2AE96C00C30B1A /* YingQiView12.xib */,
 				CBE9AE431F2339B200AA0E9C /* CustomTF.h */,
 				CBE9AE441F2339B200AA0E9C /* CustomTF.m */,
 				CBE9AE461F233D3100AA0E9C /* CustomTF_2.h */,
@@ -241,7 +247,9 @@
 				604F041D1F20976B007C32AE /* ViewController.xib in Resources */,
 				CB8656651F219E880055BCEC /* YingQiView3.xib in Resources */,
 				CB8656671F219EA30055BCEC /* YingQiView4.xib in Resources */,
+				CB2CB4021F2ADAF90044D5E7 /* YingQiView10.xib in Resources */,
 				CB86566B1F219EB30055BCEC /* YingQiView6.xib in Resources */,
+				CB76925C1F2AE96C00C30B1A /* YingQiView12.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
