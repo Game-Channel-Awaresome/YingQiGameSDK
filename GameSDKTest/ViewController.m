@@ -44,6 +44,7 @@
 
 @property (strong, nonatomic) IBOutlet CustomTF *tf_10_1;
 
+@property (strong, nonatomic) IBOutlet CustomTF_2 *tf_12_1;
 
 /**
  *  下拉数组
@@ -89,12 +90,12 @@
 //    [self twoPic];//第二个图的UI
     
     
-    [YingQiSDK YingQiSDKRequst_loginWithNumberStr:@"15171684354" withPwd:@"123456" withLoginKey:@"fe57acddce774658b241b4b937fa4747" sB:^(NSDictionary *dic) {
-       
-        NSLog(@"成功");
-    } fB:^(NSDictionary *dic) {
-        NSLog(@"失败");
-    }];
+//    [YingQiSDK YingQiSDKRequst_loginWithNumberStr:@"wangyang1511" withPwd:@"123456" withLoginKey:@"fe57acddce774658b241b4b937fa4747" sB:^(NSDictionary *dic) {
+//       
+//        NSLog(@"成功");
+//    } fB:^(NSDictionary *dic) {
+//        NSLog(@"失败");
+//    }];
     
 //    [YingQiSDK YingQiSDKRequst_tempWithsB:^(NSDictionary *dic) {
 //         NSLog(@"成功");
@@ -471,8 +472,16 @@
     
     if (self.tf_10_1.text.length) {
         
-        self.YingQiView10.hidden = YES;
-        self.YingQiView12.hidden = NO;
+        NSInteger uid = [self.successDict[@"data"][@"tempUser"][@"uid"] integerValue];
+        
+        [YingQiSDK YingQiSDKRequst_checkBindPhoneWithNumber:self.tf_10_1.text withUid:uid sB:^(NSDictionary *dic) {
+    
+            self.YingQiView10.hidden = YES;
+            self.YingQiView12.hidden = NO;
+        } fB:^(NSDictionary *dic) {
+            
+        }];
+    
     }
 }
 
@@ -491,7 +500,20 @@
  */
 - (IBAction)clickConfirmBtn_12:(id)sender {
     
-    
+    if (self.tf_12_1.text.length) {
+        
+        [YingQiSDK YingQiSDKRequst_BindPhoneWithNumber:self.tf_10_1.text withCheckCode:[self.tf_12_1.text integerValue] withTempUser:self.successDict[@"data"] sB:^(NSDictionary *dic) {
+            
+            if ([self.delegate respondsToSelector:@selector(YingQiLogin_Successed:)]) {
+                [self.delegate YingQiLogin_Successed:dic];
+            }
+            
+            self.YingQiView12.hidden = YES;
+            
+        } fB:^(NSDictionary *dic) {
+            
+        }];
+    }
 }
 
 
