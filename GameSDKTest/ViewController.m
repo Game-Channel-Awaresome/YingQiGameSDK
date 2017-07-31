@@ -81,7 +81,7 @@
     return _downDropArr;
 }
 
-#pragma mark  ================== life circle ==================
+#pragma mark  ================== life cycle ==================
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -267,7 +267,9 @@
 - (IBAction)continueGameMode:(id)sender {
     
     if ([self.delegate respondsToSelector:@selector(YingQiLogin_Successed:)]) {
+        
         [self.delegate YingQiLogin_Successed:self.successDict];
+        self.YingQiView2.hidden = YES;
     }
 }
 
@@ -470,14 +472,17 @@
  */
 - (IBAction)clickVerifyBtn_10:(id)sender {
     
+    Weakself
+    
     if (self.tf_10_1.text.length) {
         
         NSInteger uid = [self.successDict[@"data"][@"tempUser"][@"uid"] integerValue];
         
+        
         [YingQiSDK YingQiSDKRequst_checkBindPhoneWithNumber:self.tf_10_1.text withUid:uid sB:^(NSDictionary *dic) {
     
-            self.YingQiView10.hidden = YES;
-            self.YingQiView12.hidden = NO;
+            // 发送验证码
+            [weakself sendCheckCode:dic];
         } fB:^(NSDictionary *dic) {
             
         }];
@@ -485,6 +490,22 @@
     }
 }
 
+// 发送验证码
+- (void)sendCheckCode:(NSDictionary *)dic {
+
+    if (!dic[@"data"][@"tempUser"]) {
+        
+        return;
+    }
+    
+    [YingQiSDK YingQiSDKRequst_bindSendCheckcode:dic[@"data"][@"tempUser"] andNumber:self.tf_10_1.text sB:^(NSDictionary *dic) {
+        
+        self.YingQiView10.hidden = YES;
+        self.YingQiView12.hidden = NO;
+    } fB:^(NSDictionary *dic) {
+        
+    }];
+}
 
 - (IBAction)backBtnClick_10:(id)sender {
     
@@ -502,14 +523,15 @@
     
     if (self.tf_12_1.text.length) {
         
-        [YingQiSDK YingQiSDKRequst_BindPhoneWithNumber:self.tf_10_1.text withCheckCode:[self.tf_12_1.text integerValue] withTempUser:self.successDict[@"data"] sB:^(NSDictionary *dic) {
+        NSInteger uid = [self.successDict[@"data"][@"tempUser"][@"uid"] integerValue];
+        
+        [YingQiSDK YingQiSDKRequst_BindPhoneWithNumber:self.tf_10_1.text withCheckCode:[self.tf_12_1.text integerValue] withTempUser:self.successDict[@"data"] andUid:uid sB:^(NSDictionary *dic) {
             
             if ([self.delegate respondsToSelector:@selector(YingQiLogin_Successed:)]) {
                 [self.delegate YingQiLogin_Successed:dic];
             }
             
             self.YingQiView12.hidden = YES;
-            
         } fB:^(NSDictionary *dic) {
             
         }];
