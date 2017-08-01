@@ -40,11 +40,23 @@
 
 @property (nonatomic, strong) UIView *YingQiView12;
 
+@property (strong, nonatomic) IBOutlet CustomTF *tf_3_1;
+
+@property (strong, nonatomic) IBOutlet CustomTF_2 *tf_4_1;
+
+@property (strong, nonatomic) IBOutlet CustomTF *tf_4_2;
+
+@property (strong, nonatomic) IBOutlet CustomTF *tf_5_1;
+
+@property (strong, nonatomic) IBOutlet CustomTF *tf_5_2;
+
 @property (strong, nonatomic) IBOutlet CustomTF *tf_6_1;
 
 @property (strong, nonatomic) IBOutlet CustomTF *tf_10_1;
 
 @property (strong, nonatomic) IBOutlet CustomTF_2 *tf_12_1;
+
+
 
 /**
  *  下拉数组
@@ -301,8 +313,14 @@
  */
 - (IBAction)verifyBtnClick:(id)sender {
     
-    self.YingQiView3.hidden = YES;
-    self.YingQiView4.hidden = NO;
+    [YingQiSDK YingQiSDKRequst_checkPhoneRegWithNumber:self.tf_3_1.text withCheckCode:0 sB:^(NSDictionary *dic) {
+       
+        self.YingQiView3.hidden = YES;
+        self.YingQiView4.hidden = NO;
+        
+    } fB:^(NSDictionary *dic) {
+        
+    }];
 }
 
 /**
@@ -339,6 +357,18 @@
  *  @param sender <#sender description#>
  */
 - (IBAction)registerBtnClick:(id)sender {
+    
+    [YingQiSDK YingQiSDKRequst_registerWithNumber:self.tf_3_1.text withCheckCode:[self.tf_4_1.text integerValue] withPwd:self.tf_4_2.text sB:^(NSDictionary *dic) {
+        
+        self.YingQiView4.hidden = YES;
+        
+        if ([self.delegate respondsToSelector:@selector(YingQiLogin_Successed:)]) {
+            [self.delegate YingQiLogin_Successed:dic];
+        }
+        
+    } fB:^(NSDictionary *dic) {
+        
+    }];
 }
 
 /**
@@ -346,6 +376,13 @@
  *  @param sender <#sender description#>
  */
 - (IBAction)sendSMSCode:(id)sender {
+    
+    [YingQiSDK YingQiSDKRequst_sendCheckCodeWithNumber:self.tf_3_1.text sB:^(NSDictionary *dic) {
+        
+        
+    } fB:^(NSDictionary *dic) {
+        
+    }];
 }
 
 
@@ -358,6 +395,17 @@
 
 #pragma mark  ================== 5 ==================
 - (IBAction)registerBtnClick_5:(id)sender {
+    
+    [YingQiSDK YingQiSDKRequst_registerAccountWithName:self.tf_5_1.text withPwd:self.tf_5_2.text sB:^(NSDictionary *dic) {
+        
+        self.YingQiView5.hidden = YES;
+        
+        if ([self.delegate respondsToSelector:@selector(YingQiLogin_Successed:)]) {
+            [self.delegate YingQiLogin_Successed:dic];
+        }
+    } fB:^(NSDictionary *dic) {
+        
+    }];
 }
 
 - (IBAction)backBtnClick_5:(id)sender {
@@ -478,7 +526,6 @@
         
         NSInteger uid = [self.successDict[@"data"][@"tempUser"][@"uid"] integerValue];
         
-        
         [YingQiSDK YingQiSDKRequst_checkBindPhoneWithNumber:self.tf_10_1.text withUid:uid sB:^(NSDictionary *dic) {
     
             // 发送验证码
@@ -499,9 +546,10 @@
     }
     
     [YingQiSDK YingQiSDKRequst_bindSendCheckcode:dic[@"data"][@"tempUser"] andNumber:self.tf_10_1.text sB:^(NSDictionary *dic) {
-        
+           
         self.YingQiView10.hidden = YES;
         self.YingQiView12.hidden = NO;
+        
     } fB:^(NSDictionary *dic) {
         
     }];
