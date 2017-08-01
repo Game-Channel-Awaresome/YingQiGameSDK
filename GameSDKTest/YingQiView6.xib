@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
             <connections>
                 <outlet property="tf_6_1" destination="y8o-Cq-Ofi" id="CIe-lD-qGo"/>
+                <outlet property="tf_6_2" destination="yD9-Bk-nCr" id="FM1-md-swD"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

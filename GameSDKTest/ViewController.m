@@ -38,6 +38,8 @@
 
 @property (nonatomic, strong) UIView *YingQiView10;
 
+@property (nonatomic, strong) UIView *YingQiView11;
+
 @property (nonatomic, strong) UIView *YingQiView12;
 
 @property (strong, nonatomic) IBOutlet CustomTF *tf_3_1;
@@ -51,6 +53,15 @@
 @property (strong, nonatomic) IBOutlet CustomTF *tf_5_2;
 
 @property (strong, nonatomic) IBOutlet CustomTF *tf_6_1;
+
+@property (strong, nonatomic) IBOutlet CustomTF *tf_6_2;
+
+@property (strong, nonatomic) IBOutlet CustomTF *tf_7_1;
+
+@property (strong, nonatomic) IBOutlet CustomTF_2 *tf_8_1;
+
+@property (strong, nonatomic) IBOutlet CustomTF_2 *tf_8_2;
+
 
 @property (strong, nonatomic) IBOutlet CustomTF *tf_10_1;
 
@@ -100,20 +111,6 @@
     // Do any additional setup after loading the view from its nib.
     [self onePic];//第一个图的UI
 //    [self twoPic];//第二个图的UI
-    
-    
-//    [YingQiSDK YingQiSDKRequst_loginWithNumberStr:@"wangyang1511" withPwd:@"123456" withLoginKey:@"fe57acddce774658b241b4b937fa4747" sB:^(NSDictionary *dic) {
-//       
-//        NSLog(@"成功");
-//    } fB:^(NSDictionary *dic) {
-//        NSLog(@"失败");
-//    }];
-    
-//    [YingQiSDK YingQiSDKRequst_tempWithsB:^(NSDictionary *dic) {
-//         NSLog(@"成功");
-//    } fB:^(NSDictionary *dic) {
-//         NSLog(@"失败");
-//    }];
 }
 
 -(UIInterfaceOrientationMask)supportedInterfaceOrientations{
@@ -224,6 +221,8 @@
     if (_YingQiView6 == nil) {
         _YingQiView6 = [[[NSBundle mainBundle] loadNibNamed:@"YingQiView6" owner:self options:nil] lastObject];
         [self.YingQiBaseView addSubview:_YingQiView6];
+        
+//        [self addDropMenu];
     }
     return _YingQiView6;
 }
@@ -259,6 +258,14 @@
     return _YingQiView10;
 }
 
+
+- (UIView *)YingQiView11 {
+	if (_YingQiView11 == nil) {
+        _YingQiView11 = [[[NSBundle mainBundle] loadNibNamed:@"YingQiView11" owner:self options:nil] lastObject];
+	}
+	return _YingQiView11;
+}
+
 - (UIView *)YingQiView12 {
     
     if (_YingQiView12 == nil) {
@@ -278,11 +285,19 @@
  */
 - (IBAction)continueGameMode:(id)sender {
     
+    // 保存图片
+    UIGraphicsBeginImageContextWithOptions(self.YingQiView11.bounds.size, YES, [UIScreen mainScreen].scale);
+    [self.YingQiView11.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    UIImageWriteToSavedPhotosAlbum(image, self, nil, nil);
+    
     if ([self.delegate respondsToSelector:@selector(YingQiLogin_Successed:)]) {
         
         [self.delegate YingQiLogin_Successed:self.successDict];
-        self.YingQiView2.hidden = YES;
     }
+    self.YingQiBaseView.hidden = YES;
 }
 
 /**
@@ -360,7 +375,7 @@
     
     [YingQiSDK YingQiSDKRequst_registerWithNumber:self.tf_3_1.text withCheckCode:[self.tf_4_1.text integerValue] withPwd:self.tf_4_2.text sB:^(NSDictionary *dic) {
         
-        self.YingQiView4.hidden = YES;
+        self.YingQiBaseView.hidden = YES;
         
         if ([self.delegate respondsToSelector:@selector(YingQiLogin_Successed:)]) {
             [self.delegate YingQiLogin_Successed:dic];
@@ -398,7 +413,7 @@
     
     [YingQiSDK YingQiSDKRequst_registerAccountWithName:self.tf_5_1.text withPwd:self.tf_5_2.text sB:^(NSDictionary *dic) {
         
-        self.YingQiView5.hidden = YES;
+        self.YingQiBaseView.hidden = YES;
         
         if ([self.delegate respondsToSelector:@selector(YingQiLogin_Successed:)]) {
             [self.delegate YingQiLogin_Successed:dic];
@@ -422,7 +437,12 @@
  */
 - (IBAction)loginBtnClick:(id)sender {
     
-    
+    [YingQiSDK YingQiSDKRequst_loginWithNumberStr:self.tf_6_1.text withPwd:self.tf_6_2.text withLoginKey:nil sB:^(NSDictionary *dic) {
+        
+        self.YingQiBaseView.hidden = YES;
+    } fB:^(NSDictionary *dic) {
+        
+    }];
 }
 
 /**
@@ -482,28 +502,49 @@
 }
 
 #pragma mark  ================== 8 ==================
-/**
- *  确定
- *  @param sender <#sender description#>
- */
-- (IBAction)confirmBtnClick_8:(id)sender {
-}
 
 /**
- *  其他方式
+ *  返回
  *  @param sender <#sender description#>
  */
-- (IBAction)otherWayBtnClick_8:(id)sender {
-    
-    self.YingQiView8.hidden = YES;
-    self.YingQiView7.hidden = NO;
-}
-
 - (IBAction)backBtnClick_8:(id)sender {
     
     self.YingQiView8.hidden = YES;
     self.YingQiView7.hidden = NO;
 }
+
+/**
+ *  确定
+ *  @param sender <#sender description#>
+ */
+- (IBAction)confirmBtnClick_8:(id)sender {
+    
+    [YingQiSDK YingQiSDKRequst_passwordWithNumber:self.tf_7_1.text withCheckCode:[self.tf_8_1.text integerValue] withPwd:self.tf_8_2.text sB:^(NSDictionary *dic) {
+        
+        self.YingQiBaseView.hidden = YES;
+        
+        if ([self.delegate respondsToSelector:@selector(YingQiLogin_Successed:)]) {
+            [self.delegate YingQiLogin_Successed:dic];
+        }
+        
+    } fB:^(NSDictionary *dic) {
+        
+    }];
+}
+
+
+/**
+ *  点击发送验证码
+ */
+- (IBAction)sendSMSCode_8:(id)sender {
+    
+    [YingQiSDK YingQiSDKRequst_sendCheckCodeWithNumber:self.tf_7_1.text sB:^(NSDictionary *dic) {
+        
+    } fB:^(NSDictionary *dic) {
+        
+    }];
+}
+
 
 #pragma mark  ================== 9 ==================
 
