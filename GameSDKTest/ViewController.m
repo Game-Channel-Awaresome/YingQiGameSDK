@@ -294,6 +294,29 @@
  */
 - (IBAction)continueGameMode:(id)sender {
     
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"帐号保存" message:@"为了防止帐号丢失,您的帐号信息将会以图片的形式保存到相册中" preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"不保存" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        return;
+    }];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"保存" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    
+        [self saveImage];
+        self.YingQiBaseView.hidden = YES;
+    }];
+    [alertController addAction:cancelAction];
+    [alertController addAction:okAction];
+    [self presentViewController:alertController animated:YES completion:nil];
+    
+
+    if ([self.delegate respondsToSelector:@selector(YingQiLogin_Successed:)]) {
+        
+        [self.delegate YingQiLogin_Successed:self.successDict];
+    }
+}
+
+- (void)saveImage {
+    
     // 保存图片
     UIGraphicsBeginImageContextWithOptions(self.YingQiView11.bounds.size, YES, [UIScreen mainScreen].scale);
     [self.YingQiView11.layer renderInContext:UIGraphicsGetCurrentContext()];
@@ -302,11 +325,7 @@
     
     UIImageWriteToSavedPhotosAlbum(image, self, nil, nil);
     
-    if ([self.delegate respondsToSelector:@selector(YingQiLogin_Successed:)]) {
-        
-        [self.delegate YingQiLogin_Successed:self.successDict];
-    }
-    self.YingQiBaseView.hidden = YES;
+
 }
 
 /**
