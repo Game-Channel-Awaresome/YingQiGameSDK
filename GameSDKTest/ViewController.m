@@ -68,6 +68,10 @@
 @property (strong, nonatomic) IBOutlet CustomTF_2 *tf_12_1;
 
 
+@property (strong, nonatomic) IBOutlet UILabel *gameAccountLabel;
+
+@property (strong, nonatomic) IBOutlet UILabel *gamePassword;
+
 
 /**
  *  下拉数组
@@ -111,6 +115,8 @@
     // Do any additional setup after loading the view from its nib.
     [self onePic];//第一个图的UI
 //    [self twoPic];//第二个图的UI
+    
+    self.YingQiView11 = [[[NSBundle mainBundle] loadNibNamed:@"YingQiView11" owner:self options:nil] lastObject];
 }
 
 -(UIInterfaceOrientationMask)supportedInterfaceOrientations{
@@ -144,15 +150,18 @@
     
     Weakself
     
-    self.YingQiView2.hidden = NO;
-    self.YingQiView1.hidden = YES;
-    
     [YingQiSDK YingQiSDKRequst_tempWithsB:^(NSDictionary *dic) {
         NSLog(@"%@",dic);
 //        if ([self.delegate respondsToSelector:@selector(YingQiLogin_Successed:)]) {
 //            [self.delegate YingQiLogin_Successed:dic];
 //        }
         weakself.successDict = dic;
+        
+        weakself.gameAccountLabel.text = [NSString stringWithFormat:@"游戏账号: %zd",[dic[@"data"][@"tempUser"][@"uid"] integerValue]];
+        weakself.gamePassword.text = [NSString stringWithFormat:@"游戏密码: %zd",[dic[@"data"][@"tempUser"][@"pwd"] integerValue]];
+        
+        weakself.YingQiView2.hidden = NO;
+        weakself.YingQiView1.hidden = YES;
         
     } fB:^(NSDictionary *dic) {
         if ([self.delegate respondsToSelector:@selector(YingQiLogin_Failed:)]) {
@@ -259,12 +268,12 @@
 }
 
 
-- (UIView *)YingQiView11 {
-	if (_YingQiView11 == nil) {
-        _YingQiView11 = [[[NSBundle mainBundle] loadNibNamed:@"YingQiView11" owner:self options:nil] lastObject];
-	}
-	return _YingQiView11;
-}
+//- (UIView *)YingQiView11 {
+//	if (_YingQiView11 == nil) {
+//        _YingQiView11 = [[[NSBundle mainBundle] loadNibNamed:@"YingQiView11" owner:self options:nil] lastObject];
+//	}
+//	return _YingQiView11;
+//}
 
 - (UIView *)YingQiView12 {
     
