@@ -682,7 +682,7 @@
         [YingQiSDK YingQiSDKRequst_checkBindPhoneWithNumber:self.tf_10_1.text withUid:uid sB:^(NSDictionary *dic) {
     
             // 发送验证码
-            [weakself sendCheckCode:dic];
+            [weakself sendCheckCode:dic andUid:uid];
         } fB:^(NSDictionary *dic) {
             
         }];
@@ -691,18 +691,17 @@
 }
 
 // 发送验证码
-- (void)sendCheckCode:(NSDictionary *)dic {
+- (void)sendCheckCode:(NSDictionary *)dic andUid:(NSInteger)uid{
 
     if (!dic[@"data"][@"tempUser"]) {
         
         return;
     }
     
-    [YingQiSDK YingQiSDKRequst_bindSendCheckcode:dic[@"data"][@"tempUser"] andNumber:self.tf_10_1.text sB:^(NSDictionary *dic) {
-           
+    [YingQiSDK YingQiSDKRequst_bindSendCheckcode:dic[@"data"][@"tempUser"] andNumber:self.tf_10_1.text uid:uid sB:^(NSDictionary *dic) {
+        
         self.YingQiView10.hidden = YES;
         self.YingQiView12.hidden = NO;
-        
     } fB:^(NSDictionary *dic) {
         
     }];
@@ -732,7 +731,7 @@
                 [self.delegate YingQiLogin_Successed:dic];
             }
             
-            self.YingQiView12.hidden = YES;
+            self.YingQiBaseView.hidden = YES;
         } fB:^(NSDictionary *dic) {
             
         }];
