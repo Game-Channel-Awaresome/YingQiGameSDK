@@ -128,10 +128,6 @@
 //    [self twoPic];//第二个图的UI
     
     self.YingQiView11 = [[[NSBundle mainBundle] loadNibNamed:@"YingQiView11" owner:self options:nil] lastObject];
-    
-    NSString *str = [NSString stringWithFormat:@"a"];
-//    NSString *str = @"a";
-    NSLog(@"-----------------%p",&str);
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -290,14 +286,6 @@
     return _YingQiView10;
 }
 
-
-//- (UIView *)YingQiView11 {
-//	if (_YingQiView11 == nil) {
-//        _YingQiView11 = [[[NSBundle mainBundle] loadNibNamed:@"YingQiView11" owner:self options:nil] lastObject];
-//	}
-//	return _YingQiView11;
-//}
-
 - (UIView *)YingQiView12 {
     
     if (_YingQiView12 == nil) {
@@ -347,8 +335,6 @@
     UIGraphicsEndImageContext();
     
     UIImageWriteToSavedPhotosAlbum(image, self, nil, nil);
-    
-
 }
 
 /**
