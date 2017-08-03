@@ -117,6 +117,10 @@
 //    [self twoPic];//第二个图的UI
     
     self.YingQiView11 = [[[NSBundle mainBundle] loadNibNamed:@"YingQiView11" owner:self options:nil] lastObject];
+    
+    NSString *str = [NSString stringWithFormat:@"a"];
+//    NSString *str = @"a";
+    NSLog(@"-----------------%p",&str);
 }
 
 -(UIInterfaceOrientationMask)supportedInterfaceOrientations{
@@ -439,16 +443,19 @@
 #pragma mark  ================== 5 ==================
 - (IBAction)registerBtnClick_5:(id)sender {
     
-    [YingQiSDK YingQiSDKRequst_registerAccountWithName:self.tf_5_1.text withPwd:self.tf_5_2.text sB:^(NSDictionary *dic) {
+    if (self.tf_5_1.text.length && self.tf_5_2.text.length) {
         
-        self.YingQiBaseView.hidden = YES;
-        
-        if ([self.delegate respondsToSelector:@selector(YingQiLogin_Successed:)]) {
-            [self.delegate YingQiLogin_Successed:dic];
-        }
-    } fB:^(NSDictionary *dic) {
-        
-    }];
+        [YingQiSDK YingQiSDKRequst_registerAccountWithName:self.tf_5_1.text withPwd:self.tf_5_2.text sB:^(NSDictionary *dic) {
+            
+            self.YingQiBaseView.hidden = YES;
+            
+            if ([self.delegate respondsToSelector:@selector(YingQiLogin_Successed:)]) {
+                [self.delegate YingQiLogin_Successed:dic];
+            }
+        } fB:^(NSDictionary *dic) {
+            
+        }];
+    }
 }
 
 - (IBAction)backBtnClick_5:(id)sender {
@@ -465,12 +472,15 @@
  */
 - (IBAction)loginBtnClick:(id)sender {
     
-    [YingQiSDK YingQiSDKRequst_loginWithNumberStr:self.tf_6_1.text withPwd:self.tf_6_2.text withLoginKey:nil sB:^(NSDictionary *dic) {
+    if (self.tf_6_1.text.length && self.tf_6_2.text.length) {
         
-        self.YingQiBaseView.hidden = YES;
-    } fB:^(NSDictionary *dic) {
-        
-    }];
+        [YingQiSDK YingQiSDKRequst_loginWithNumberStr:self.tf_6_1.text withPwd:self.tf_6_2.text withLoginKey:nil sB:^(NSDictionary *dic) {
+            
+            self.YingQiBaseView.hidden = YES;
+        } fB:^(NSDictionary *dic) {
+            
+        }];
+    }
 }
 
 /**
@@ -509,8 +519,11 @@
  */
 - (IBAction)confirmBtnClick:(id)sender {
     
-    self.YingQiView7.hidden = YES;
-    self.YingQiView8.hidden = NO;
+    if (self.tf_7_1.text.length) {
+        
+        self.YingQiView7.hidden = YES;
+        self.YingQiView8.hidden = NO;
+    }
 }
 
 /**
