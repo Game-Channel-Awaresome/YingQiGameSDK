@@ -73,6 +73,10 @@
 @property (strong, nonatomic) IBOutlet UILabel *gamePassword;
 
 
+@property (strong, nonatomic) IBOutlet UIButton *smsBtn;
+@property (strong, nonatomic) IBOutlet UIButton *smsBtn_8;
+
+
 /**
  *  下拉数组
  */
@@ -82,6 +86,13 @@
  *  全局唯一成功回调数据
  */
 @property (nonatomic, strong) NSDictionary *successDict;
+
+// 倒计时
+@property (nonatomic, strong) NSTimer *timer;
+@property (nonatomic, assign) NSInteger timeCount;
+
+@property (nonatomic, strong) NSTimer *timer2;
+@property (nonatomic, assign) NSInteger timeCount2;
 
 @end
 
@@ -121,6 +132,14 @@
     NSString *str = [NSString stringWithFormat:@"a"];
 //    NSString *str = @"a";
     NSLog(@"-----------------%p",&str);
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    
+    [super viewDidDisappear:animated];
+    
+    [self.timer invalidate];
+    [self.timer2 invalidate];
 }
 
 -(UIInterfaceOrientationMask)supportedInterfaceOrientations{
@@ -360,6 +379,10 @@
  */
 - (IBAction)verifyBtnClick:(id)sender {
     
+    if (!self.tf_3_1.text.length) {
+        return;
+    }
+    
     [YingQiSDK YingQiSDKRequst_checkPhoneRegWithNumber:self.tf_3_1.text withCheckCode:0 sB:^(NSDictionary *dic) {
        
         self.YingQiView3.hidden = YES;
@@ -405,17 +428,20 @@
  */
 - (IBAction)registerBtnClick:(id)sender {
     
-    [YingQiSDK YingQiSDKRequst_registerWithNumber:self.tf_3_1.text withCheckCode:[self.tf_4_1.text integerValue] withPwd:self.tf_4_2.text sB:^(NSDictionary *dic) {
+    if (self.tf_4_1.text.length && self.tf_4_2.text.length) {
         
-        self.YingQiBaseView.hidden = YES;
-        
-        if ([self.delegate respondsToSelector:@selector(YingQiLogin_Successed:)]) {
-            [self.delegate YingQiLogin_Successed:dic];
-        }
-        
-    } fB:^(NSDictionary *dic) {
-        
-    }];
+        [YingQiSDK YingQiSDKRequst_registerWithNumber:self.tf_3_1.text withCheckCode:[self.tf_4_1.text integerValue] withPwd:self.tf_4_2.text sB:^(NSDictionary *dic) {
+            
+            self.YingQiBaseView.hidden = YES;
+            
+            if ([self.delegate respondsToSelector:@selector(YingQiLogin_Successed:)]) {
+                [self.delegate YingQiLogin_Successed:dic];
+            }
+            
+        } fB:^(NSDictionary *dic) {
+            
+        }];
+    }
 }
 
 /**
@@ -424,13 +450,61 @@
  */
 - (IBAction)sendSMSCode:(id)sender {
     
+    self.smsBtn.enabled = NO;
+    
     [YingQiSDK YingQiSDKRequst_sendCheckCodeWithNumber:self.tf_3_1.text sB:^(NSDictionary *dic) {
         
+        self.timeCount = 60;
+        // 创建
+        self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                                      target:self
+                                                    selector:@selector(changeTimeTitle)
+                                                    userInfo:nil
+                                                     repeats:YES];
         
     } fB:^(NSDictionary *dic) {
         
+        self.smsBtn.enabled = YES;
+        
     }];
 }
+
+/**
+ *  倒计时验证码
+ */
+- (void)changeTimeTitle {
+    
+    // 倒计时结束
+    if (self.timeCount <= 0) {
+        
+        self.smsBtn.enabled = YES;
+        [self.smsBtn setTitle:@"发送验证码" forState:UIControlStateNormal];
+        return;
+    }
+    
+    // 正在倒计时
+    
+    [self.smsBtn setTitle:[NSString stringWithFormat:@"%zds",self.timeCount] forState:UIControlStateNormal];
+    self.timeCount--;
+}
+
+- (void)changeTimeTitle2 {
+    
+    // 倒计时结束
+    if (self.timeCount2 <= 0) {
+        
+        self.smsBtn_8.enabled = YES;
+        [self.smsBtn_8 setTitle:@"发送验证码" forState:UIControlStateNormal];
+        return;
+    }
+    
+    // 正在倒计时
+    
+    [self.smsBtn_8 setTitle:[NSString stringWithFormat:@"%zds",self.timeCount2] forState:UIControlStateNormal];
+    self.timeCount2--;
+}
+
+
 
 
 - (IBAction)backBtnClick_4:(id)sender {
@@ -579,10 +653,21 @@
  */
 - (IBAction)sendSMSCode_8:(id)sender {
     
+    self.smsBtn_8.enabled = NO;
+    
     [YingQiSDK YingQiSDKRequst_sendCheckCodeWithNumber:self.tf_7_1.text sB:^(NSDictionary *dic) {
+        
+        self.timeCount2 = 60;
+        // 创建
+        self.timer2 = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                                      target:self
+                                                    selector:@selector(changeTimeTitle2)
+                                                    userInfo:nil
+                                                     repeats:YES];
         
     } fB:^(NSDictionary *dic) {
         
+        self.smsBtn_8.enabled = NO;
     }];
 }
 

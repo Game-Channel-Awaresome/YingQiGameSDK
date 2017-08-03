@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
             <connections>
+                <outlet property="smsBtn_8" destination="glj-Ov-X5o" id="EZ9-F1-fT7"/>
                 <outlet property="tf_8_1" destination="XTi-NE-S28" id="68v-qn-L3q"/>
                 <outlet property="tf_8_2" destination="JkT-Vo-Vwr" id="ORf-ms-aSH"/>
             </connections>
@@ -48,11 +49,13 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="glj-Ov-X5o">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="glj-Ov-X5o">
                     <rect key="frame" x="334" y="52" width="46" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                    <state key="normal" title="发送验证码"/>
+                    <state key="normal" title="发送验证码">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                     <connections>
                         <action selector="sendSMSCode_8:" destination="-1" eventType="touchUpInside" id="AsM-nw-ozC"/>
                     </connections>
