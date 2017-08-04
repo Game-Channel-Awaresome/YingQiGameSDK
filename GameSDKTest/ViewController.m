@@ -183,9 +183,7 @@
         weakself.YingQiView1.hidden = YES;
         
     } fB:^(NSDictionary *dic) {
-        if ([self.delegate respondsToSelector:@selector(YingQiLogin_Failed:)]) {
-            [self.delegate YingQiLogin_Failed:dic];
-        }
+        [self failedLogined:dic];
     }];
     
 }
@@ -318,12 +316,9 @@
     [alertController addAction:cancelAction];
     [alertController addAction:okAction];
     [self presentViewController:alertController animated:YES completion:nil];
-    
 
-    if ([self.delegate respondsToSelector:@selector(YingQiLogin_Successed:)]) {
-        
-        [self.delegate YingQiLogin_Successed:self.successDict];
-    }
+    
+    [self successfullyLogined:self.successDict];
 }
 
 - (void)saveImage {
@@ -420,9 +415,7 @@
             
             self.YingQiBaseView.hidden = YES;
             
-            if ([self.delegate respondsToSelector:@selector(YingQiLogin_Successed:)]) {
-                [self.delegate YingQiLogin_Successed:dic];
-            }
+            [self successfullyLogined:dic];
             
         } fB:^(NSDictionary *dic) {
             
@@ -509,9 +502,7 @@
             
             self.YingQiBaseView.hidden = YES;
             
-            if ([self.delegate respondsToSelector:@selector(YingQiLogin_Successed:)]) {
-                [self.delegate YingQiLogin_Successed:dic];
-            }
+            [self successfullyLogined:dic];
         } fB:^(NSDictionary *dic) {
             
         }];
@@ -624,9 +615,7 @@
         
         self.YingQiBaseView.hidden = YES;
         
-        if ([self.delegate respondsToSelector:@selector(YingQiLogin_Successed:)]) {
-            [self.delegate YingQiLogin_Successed:dic];
-        }
+        [self successfullyLogined:dic];
         
     } fB:^(NSDictionary *dic) {
         
@@ -727,9 +716,7 @@
         
         [YingQiSDK YingQiSDKRequst_BindPhoneWithNumber:self.tf_10_1.text withCheckCode:[self.tf_12_1.text integerValue] withTempUser:self.successDict[@"data"] andUid:uid sB:^(NSDictionary *dic) {
             
-            if ([self.delegate respondsToSelector:@selector(YingQiLogin_Successed:)]) {
-                [self.delegate YingQiLogin_Successed:dic];
-            }
+            [self successfullyLogined:dic];
             
             self.YingQiBaseView.hidden = YES;
         } fB:^(NSDictionary *dic) {
@@ -751,6 +738,19 @@
 - (void)dropdownMenu:(LMJDropdownMenu *)menu selectedCellNumber:(NSInteger)number {
     
     self.tf_6_1.text = self.downDropArr[number];
+}
+
+#pragma mark  ================== 最终登录成功的方法 ==================
+- (void)successfullyLogined:(NSDictionary *)dic {
+    
+    
+}
+
+
+#pragma mark  ================== 登录失败的方法 ==================
+- (void)failedLogined:(NSDictionary *)dic {
+    
+    
 }
 
 @end
