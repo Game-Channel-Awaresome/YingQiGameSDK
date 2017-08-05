@@ -11,7 +11,7 @@
 
 #define Weakself __weak typeof(self) weakself = self;
 
-@interface ViewController ()
+@interface ViewController ()<YingQiLoginDelegate>
 
 @end
 
@@ -28,7 +28,20 @@
     self.view.backgroundColor = [UIColor redColor];
     
     SDKViewController *sdkVC = [[SDKViewController alloc] init];
+    sdkVC.delegate = self;
     [sdkVC showInCustomVC:self];
+}
+
+
+-(void)YingQiLogin_Successed:(NSDictionary *)successDic {
+    
+    
+}
+
+
+- (void)YingQiLogin_Failed:(NSDictionary *)failDic {
+    
+    
 }
 
 
