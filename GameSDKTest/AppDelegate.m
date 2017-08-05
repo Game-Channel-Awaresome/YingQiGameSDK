@@ -20,7 +20,6 @@
     // Override point for customization after application launch.
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-//    self.window.backgroundColor = [UIColor whiteColor];
     ViewController *payVC = [ViewController new];
     self.window.rootViewController = payVC;
     [self.window makeKeyAndVisible];

@@ -16,7 +16,7 @@
 
  @param successDic  登录成功服务器返回的对象
  */
--(void)YingQiLogin_Successed:(NSDictionary *)successDic;
+//-(void)YingQiLogin_Successed:(NSDictionary *)successDic;
 
 @optional
 /**
@@ -30,6 +30,6 @@
 
 @interface ViewController : UIViewController
 
-@property (nonatomic, weak) id<YingQiLoginDelegate> delegate;
+//@property (nonatomic, weak) id<YingQiLoginDelegate> delegate;
 
 @end
