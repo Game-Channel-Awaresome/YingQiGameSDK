@@ -7,43 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		604F041C1F20976B007C32AE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 604F041A1F20976B007C32AE /* ViewController.m */; };
-		604F041D1F20976B007C32AE /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 604F041B1F20976B007C32AE /* ViewController.xib */; };
-		604F041F1F209B20007C32AE /* YingQiView1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 604F041E1F209B1F007C32AE /* YingQiView1.xib */; };
 		60D4AD9D1E83DCCB00DEE9D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D4AD9C1E83DCCB00DEE9D1 /* main.m */; };
 		60D4ADA01E83DCCB00DEE9D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D4AD9F1E83DCCB00DEE9D1 /* AppDelegate.m */; };
 		60D4ADA81E83DCCB00DEE9D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60D4ADA71E83DCCB00DEE9D1 /* Assets.xcassets */; };
 		60D4ADAB1E83DCCB00DEE9D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60D4ADA91E83DCCB00DEE9D1 /* LaunchScreen.storyboard */; };
-		60D4ADB61E83E00B00DEE9D1 /* GameSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60D4ADB51E83E00B00DEE9D1 /* GameSDK.a */; };
 		60D4ADB91E83E56100DEE9D1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 60D4ADB81E83E56100DEE9D1 /* libz.tbd */; };
 		60D4ADBB1E83E56900DEE9D1 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 60D4ADBA1E83E56900DEE9D1 /* libresolv.tbd */; };
 		60D4ADBD1E83E57800DEE9D1 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 60D4ADBC1E83E57800DEE9D1 /* libc++.tbd */; };
 		60D4ADBF1E83E58100DEE9D1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60D4ADBE1E83E58100DEE9D1 /* SystemConfiguration.framework */; };
 		60D4ADC11E83E58A00DEE9D1 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60D4ADC01E83E58A00DEE9D1 /* CoreTelephony.framework */; };
 		60D4ADC31E83E59600DEE9D1 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 60D4ADC21E83E59600DEE9D1 /* libsqlite3.tbd */; };
-		CB2058AD1F243C3E00343526 /* dropdownMenu_cornerIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CB2058AA1F243C3E00343526 /* dropdownMenu_cornerIcon.png */; };
-		CB2058AE1F243C3E00343526 /* LMJDropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2058AC1F243C3E00343526 /* LMJDropdownMenu.m */; };
-		CB2CB4021F2ADAF90044D5E7 /* YingQiView10.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB2CB4011F2ADAF90044D5E7 /* YingQiView10.xib */; };
-		CB76925C1F2AE96C00C30B1A /* YingQiView12.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB76925B1F2AE96C00C30B1A /* YingQiView12.xib */; };
-		CB8656631F219E7D0055BCEC /* YingQiView2.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB8656621F219E7D0055BCEC /* YingQiView2.xib */; };
-		CB8656651F219E880055BCEC /* YingQiView3.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB8656641F219E880055BCEC /* YingQiView3.xib */; };
-		CB8656671F219EA30055BCEC /* YingQiView4.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB8656661F219EA30055BCEC /* YingQiView4.xib */; };
-		CB8656691F219EAD0055BCEC /* YingQiView5.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB8656681F219EAD0055BCEC /* YingQiView5.xib */; };
-		CB86566B1F219EB30055BCEC /* YingQiView6.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB86566A1F219EB30055BCEC /* YingQiView6.xib */; };
-		CB86566D1F219EB90055BCEC /* YingQiView7.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB86566C1F219EB90055BCEC /* YingQiView7.xib */; };
-		CB86566F1F21A5670055BCEC /* YingQiView8.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB86566E1F21A5670055BCEC /* YingQiView8.xib */; };
-		CB8656711F21A5700055BCEC /* YingQiView9.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB8656701F21A5700055BCEC /* YingQiView9.xib */; };
-		CBDDCD6B1F306B0100679117 /* YingQiView11.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBDDCD6A1F306B0100679117 /* YingQiView11.xib */; };
-		CBE9AE451F2339B200AA0E9C /* CustomTF.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE9AE441F2339B200AA0E9C /* CustomTF.m */; };
-		CBE9AE481F233D3100AA0E9C /* CustomTF_2.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE9AE471F233D3100AA0E9C /* CustomTF_2.m */; };
+		CB2685B31F3464470057C718 /* bundleWithXib.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CB2685AF1F3464470057C718 /* bundleWithXib.bundle */; };
+		CB4A5F871F356AF60064CB73 /* SDKViewController.nib in Resources */ = {isa = PBXBuildFile; fileRef = CB4A5F861F356AF60064CB73 /* SDKViewController.nib */; };
+		CB4A5FB81F35A5FF0064CB73 /* GameSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2685B01F3464470057C718 /* GameSDK.a */; };
+		CBDDCD931F34227C00679117 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDDCD921F34227C00679117 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		604F04191F20976B007C32AE /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		604F041A1F20976B007C32AE /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		604F041B1F20976B007C32AE /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
-		604F041E1F209B1F007C32AE /* YingQiView1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YingQiView1.xib; sourceTree = "<group>"; };
-		60BFCF7C1F23334600D047E2 /* YingQiSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YingQiSDK.h; sourceTree = "<group>"; };
 		60D4AD981E83DCCB00DEE9D1 /* GameSDKTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameSDKTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60D4AD9C1E83DCCB00DEE9D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		60D4AD9E1E83DCCB00DEE9D1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,31 +31,22 @@
 		60D4ADA71E83DCCB00DEE9D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60D4ADAA1E83DCCB00DEE9D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60D4ADAC1E83DCCB00DEE9D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		60D4ADB51E83E00B00DEE9D1 /* GameSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = GameSDK.a; sourceTree = "<group>"; };
 		60D4ADB81E83E56100DEE9D1 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		60D4ADBA1E83E56900DEE9D1 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		60D4ADBC1E83E57800DEE9D1 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		60D4ADBE1E83E58100DEE9D1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		60D4ADC01E83E58A00DEE9D1 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		60D4ADC21E83E59600DEE9D1 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		CB2058AA1F243C3E00343526 /* dropdownMenu_cornerIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropdownMenu_cornerIcon.png; sourceTree = "<group>"; };
-		CB2058AB1F243C3E00343526 /* LMJDropdownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMJDropdownMenu.h; sourceTree = "<group>"; };
-		CB2058AC1F243C3E00343526 /* LMJDropdownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMJDropdownMenu.m; sourceTree = "<group>"; };
-		CB2CB4011F2ADAF90044D5E7 /* YingQiView10.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YingQiView10.xib; sourceTree = "<group>"; };
-		CB76925B1F2AE96C00C30B1A /* YingQiView12.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YingQiView12.xib; sourceTree = "<group>"; };
-		CB8656621F219E7D0055BCEC /* YingQiView2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YingQiView2.xib; sourceTree = "<group>"; };
-		CB8656641F219E880055BCEC /* YingQiView3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YingQiView3.xib; sourceTree = "<group>"; };
-		CB8656661F219EA30055BCEC /* YingQiView4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YingQiView4.xib; sourceTree = "<group>"; };
-		CB8656681F219EAD0055BCEC /* YingQiView5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YingQiView5.xib; sourceTree = "<group>"; };
-		CB86566A1F219EB30055BCEC /* YingQiView6.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YingQiView6.xib; sourceTree = "<group>"; };
-		CB86566C1F219EB90055BCEC /* YingQiView7.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YingQiView7.xib; sourceTree = "<group>"; };
-		CB86566E1F21A5670055BCEC /* YingQiView8.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YingQiView8.xib; sourceTree = "<group>"; };
-		CB8656701F21A5700055BCEC /* YingQiView9.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YingQiView9.xib; sourceTree = "<group>"; };
-		CBDDCD6A1F306B0100679117 /* YingQiView11.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YingQiView11.xib; sourceTree = "<group>"; };
-		CBE9AE431F2339B200AA0E9C /* CustomTF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTF.h; sourceTree = "<group>"; };
-		CBE9AE441F2339B200AA0E9C /* CustomTF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTF.m; sourceTree = "<group>"; };
-		CBE9AE461F233D3100AA0E9C /* CustomTF_2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTF_2.h; sourceTree = "<group>"; };
-		CBE9AE471F233D3100AA0E9C /* CustomTF_2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTF_2.m; sourceTree = "<group>"; };
+		CB2685AF1F3464470057C718 /* bundleWithXib.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = bundleWithXib.bundle; sourceTree = "<group>"; };
+		CB2685B01F3464470057C718 /* GameSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = GameSDK.a; sourceTree = "<group>"; };
+		CB2685B21F3464470057C718 /* SDKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDKViewController.h; sourceTree = "<group>"; };
+		CB4A5F7B1F355AD50064CB73 /* CustomTF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTF.h; sourceTree = "<group>"; };
+		CB4A5F7C1F355AD50064CB73 /* CustomTF_2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTF_2.h; sourceTree = "<group>"; };
+		CB4A5F7D1F355AE00064CB73 /* LMJDropdownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMJDropdownMenu.h; sourceTree = "<group>"; };
+		CB4A5F7E1F35602B0064CB73 /* libSGsdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSGsdk.a; path = GameSDKTest/MyLibrary/libSGsdk.a; sourceTree = "<group>"; };
+		CB4A5F861F356AF60064CB73 /* SDKViewController.nib */ = {isa = PBXFileReference; lastKnownFileType = file; name = SDKViewController.nib; path = GameSDKTest/MyLibrary/bundleWithXib.bundle/SDKViewController.nib; sourceTree = "<group>"; };
+		CBDDCD911F34227C00679117 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CBDDCD921F34227C00679117 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,13 +54,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB4A5FB81F35A5FF0064CB73 /* GameSDK.a in Frameworks */,
 				60D4ADC31E83E59600DEE9D1 /* libsqlite3.tbd in Frameworks */,
 				60D4ADC11E83E58A00DEE9D1 /* CoreTelephony.framework in Frameworks */,
 				60D4ADBF1E83E58100DEE9D1 /* SystemConfiguration.framework in Frameworks */,
 				60D4ADBD1E83E57800DEE9D1 /* libc++.tbd in Frameworks */,
 				60D4ADBB1E83E56900DEE9D1 /* libresolv.tbd in Frameworks */,
 				60D4ADB91E83E56100DEE9D1 /* libz.tbd in Frameworks */,
-				60D4ADB61E83E00B00DEE9D1 /* GameSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +70,7 @@
 		60D4AD8F1E83DCCB00DEE9D1 = {
 			isa = PBXGroup;
 			children = (
+				CB4A5F861F356AF60064CB73 /* SDKViewController.nib */,
 				60D4AD9A1E83DCCB00DEE9D1 /* GameSDKTest */,
 				60D4AD991E83DCCB00DEE9D1 /* Products */,
 				60D4ADB71E83E56000DEE9D1 /* Frameworks */,
@@ -116,30 +88,11 @@
 		60D4AD9A1E83DCCB00DEE9D1 /* GameSDKTest */ = {
 			isa = PBXGroup;
 			children = (
-				CB2058A91F243C3E00343526 /* LMJDropdownMenu */,
-				60D4ADB51E83E00B00DEE9D1 /* GameSDK.a */,
+				CB2685AE1F3464470057C718 /* MyLibrary */,
 				60D4AD9E1E83DCCB00DEE9D1 /* AppDelegate.h */,
 				60D4AD9F1E83DCCB00DEE9D1 /* AppDelegate.m */,
-				60BFCF7C1F23334600D047E2 /* YingQiSDK.h */,
-				604F04191F20976B007C32AE /* ViewController.h */,
-				604F041A1F20976B007C32AE /* ViewController.m */,
-				604F041B1F20976B007C32AE /* ViewController.xib */,
-				604F041E1F209B1F007C32AE /* YingQiView1.xib */,
-				CB8656621F219E7D0055BCEC /* YingQiView2.xib */,
-				CB8656641F219E880055BCEC /* YingQiView3.xib */,
-				CB8656661F219EA30055BCEC /* YingQiView4.xib */,
-				CB8656681F219EAD0055BCEC /* YingQiView5.xib */,
-				CB86566A1F219EB30055BCEC /* YingQiView6.xib */,
-				CB86566C1F219EB90055BCEC /* YingQiView7.xib */,
-				CB86566E1F21A5670055BCEC /* YingQiView8.xib */,
-				CB8656701F21A5700055BCEC /* YingQiView9.xib */,
-				CB2CB4011F2ADAF90044D5E7 /* YingQiView10.xib */,
-				CBDDCD6A1F306B0100679117 /* YingQiView11.xib */,
-				CB76925B1F2AE96C00C30B1A /* YingQiView12.xib */,
-				CBE9AE431F2339B200AA0E9C /* CustomTF.h */,
-				CBE9AE441F2339B200AA0E9C /* CustomTF.m */,
-				CBE9AE461F233D3100AA0E9C /* CustomTF_2.h */,
-				CBE9AE471F233D3100AA0E9C /* CustomTF_2.m */,
+				CBDDCD911F34227C00679117 /* ViewController.h */,
+				CBDDCD921F34227C00679117 /* ViewController.m */,
 				60D4ADA71E83DCCB00DEE9D1 /* Assets.xcassets */,
 				60D4ADA91E83DCCB00DEE9D1 /* LaunchScreen.storyboard */,
 				60D4ADAC1E83DCCB00DEE9D1 /* Info.plist */,
@@ -159,6 +112,7 @@
 		60D4ADB71E83E56000DEE9D1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CB4A5F7E1F35602B0064CB73 /* libSGsdk.a */,
 				60D4ADC21E83E59600DEE9D1 /* libsqlite3.tbd */,
 				60D4ADC01E83E58A00DEE9D1 /* CoreTelephony.framework */,
 				60D4ADBE1E83E58100DEE9D1 /* SystemConfiguration.framework */,
@@ -169,14 +123,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CB2058A91F243C3E00343526 /* LMJDropdownMenu */ = {
+		CB2685AE1F3464470057C718 /* MyLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				CB2058AA1F243C3E00343526 /* dropdownMenu_cornerIcon.png */,
-				CB2058AB1F243C3E00343526 /* LMJDropdownMenu.h */,
-				CB2058AC1F243C3E00343526 /* LMJDropdownMenu.m */,
+				CB2685AF1F3464470057C718 /* bundleWithXib.bundle */,
+				CB2685B01F3464470057C718 /* GameSDK.a */,
+				CB2685B11F3464470057C718 /* include */,
 			);
-			path = LMJDropdownMenu;
+			path = MyLibrary;
+			sourceTree = "<group>";
+		};
+		CB2685B11F3464470057C718 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				CB4A5F7B1F355AD50064CB73 /* CustomTF.h */,
+				CB4A5F7C1F355AD50064CB73 /* CustomTF_2.h */,
+				CB2685B21F3464470057C718 /* SDKViewController.h */,
+				CB4A5F7D1F355AE00064CB73 /* LMJDropdownMenu.h */,
+			);
+			path = include;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,22 +203,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB86566F1F21A5670055BCEC /* YingQiView8.xib in Resources */,
+				CB4A5F871F356AF60064CB73 /* SDKViewController.nib in Resources */,
 				60D4ADAB1E83DCCB00DEE9D1 /* LaunchScreen.storyboard in Resources */,
-				CB8656691F219EAD0055BCEC /* YingQiView5.xib in Resources */,
-				604F041F1F209B20007C32AE /* YingQiView1.xib in Resources */,
-				CB86566D1F219EB90055BCEC /* YingQiView7.xib in Resources */,
-				CB8656711F21A5700055BCEC /* YingQiView9.xib in Resources */,
-				CB2058AD1F243C3E00343526 /* dropdownMenu_cornerIcon.png in Resources */,
+				CB2685B31F3464470057C718 /* bundleWithXib.bundle in Resources */,
 				60D4ADA81E83DCCB00DEE9D1 /* Assets.xcassets in Resources */,
-				CB8656631F219E7D0055BCEC /* YingQiView2.xib in Resources */,
-				604F041D1F20976B007C32AE /* ViewController.xib in Resources */,
-				CB8656651F219E880055BCEC /* YingQiView3.xib in Resources */,
-				CB8656671F219EA30055BCEC /* YingQiView4.xib in Resources */,
-				CB2CB4021F2ADAF90044D5E7 /* YingQiView10.xib in Resources */,
-				CB86566B1F219EB30055BCEC /* YingQiView6.xib in Resources */,
-				CB76925C1F2AE96C00C30B1A /* YingQiView12.xib in Resources */,
-				CBDDCD6B1F306B0100679117 /* YingQiView11.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,11 +217,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				604F041C1F20976B007C32AE /* ViewController.m in Sources */,
-				CB2058AE1F243C3E00343526 /* LMJDropdownMenu.m in Sources */,
 				60D4ADA01E83DCCB00DEE9D1 /* AppDelegate.m in Sources */,
-				CBE9AE481F233D3100AA0E9C /* CustomTF_2.m in Sources */,
-				CBE9AE451F2339B200AA0E9C /* CustomTF.m in Sources */,
+				CBDDCD931F34227C00679117 /* ViewController.m in Sources */,
 				60D4AD9D1E83DCCB00DEE9D1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,11 +341,16 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GameSDKTest",
+					"$(PROJECT_DIR)/GameSDKTest/MyLibrary",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yqwbpdk.www;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
 			};
 			name = Debug;
 		};
@@ -415,11 +370,16 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GameSDKTest",
+					"$(PROJECT_DIR)/GameSDKTest/MyLibrary",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yqwbpdk.www;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
 			};
 			name = Release;
 		};
